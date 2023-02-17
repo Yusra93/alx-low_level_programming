@@ -1,8 +1,12 @@
- #include <stdio.h> 
-    
-  int  main(void) { 
-     static const char hello[] = "Programming is like building a multilingual puzzle\n"; 
-      fwrite(hello, sizeof(hello) - 1, 1, stdout); 
-      return(0);
-    } 
+#include<stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	puts("Programming is like building a multilingual puzzle\n");
+	return (0);
+}
 
