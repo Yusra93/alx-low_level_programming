@@ -3,7 +3,10 @@
 #include <time.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ *  main - Entry point. check whether a number is positive or negative
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
@@ -13,7 +16,7 @@ int main(void)
 	/* your code goes there */
 	if (n > 0)
 		printf("is positive\n");
-	else if(n < 0)
+	else if (n < 0)
 		printf("is negative\n");
 	else
 		printf("is zero");
