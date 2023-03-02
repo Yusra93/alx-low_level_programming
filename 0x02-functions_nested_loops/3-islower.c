@@ -2,6 +2,7 @@
 
 /**
  * _islower - check whether the letter is lowercase or not
+ * @param - char
  * Return:  1 (True)
  */
 int _islower(int c)
