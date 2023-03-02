@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * void times_table- print the 9 times table
