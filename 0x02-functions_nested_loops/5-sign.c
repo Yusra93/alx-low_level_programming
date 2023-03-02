@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print-sign - check the sign
+ * print_sign - check the sign
  * @n: the integer value it receives
  * Return: 1 and prints + if n is greater than zero
  * Return ptints 0if n is zero
@@ -21,7 +21,7 @@ int print_sign(int n)
 	}
 	else
 	{
-		_putchar(0);
+		_putchar('0');
 		return (0);
 	}
 }
