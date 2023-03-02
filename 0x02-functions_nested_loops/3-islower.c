@@ -2,7 +2,7 @@
 
 /**
  * _islower - check whether the letter is lowercase or not
- * @param - char
+ * @c: the integer value it receives
  * Return:  1 (True)
  */
 int _islower(int c)
