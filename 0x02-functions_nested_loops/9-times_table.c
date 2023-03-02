@@ -4,10 +4,9 @@
  * void times_table- print the 9 times table
  * Return: void.
  */
-			
+
 void times_table(void)
 {
-	
 	int row, column, product, tens, ones;
 
 	for (row = 0; row <= 9; row++)
@@ -38,6 +37,6 @@ void times_table(void)
 			}
 		}
 		_putchar('\n');
-	}				
+	}
 }
 
