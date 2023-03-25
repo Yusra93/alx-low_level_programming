@@ -12,17 +12,22 @@ int _putchar(char c)
 /* void print_most_numbers(void)*/
 int main(void)
 {
-	int i;
-
-	for(i = 0; i < 10; i++)
-	{
-		if ((i == 2) || (i == 4))
-		{	
-			continue;
+	int i, n, j = 0;
+	
+        while (j++ < 10)
+        {
+                for (i = 0; i < 15; i++)
+		{                 
+			n = i;
+			if (i > 9)
+			{
+				_putchar('1');
+				n = i % 10;
+			}
+				 _putchar(n + '0');
 		}
-		_putchar(i + '0');
-	}
-	_putchar('\n');
+		_putchar('\n');
+        }
 	return(0);
 }
 
