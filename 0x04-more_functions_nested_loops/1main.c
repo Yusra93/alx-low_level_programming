@@ -11,19 +11,21 @@ int _putchar(char c)
 }
 void print_diagonal(int n)
 {
-	int i, j = 0;
+	int i, j, l;
 
         if (n <= 0)
                 _putchar('\n');
-        while (j < n)
+        for (j = 0; j <= n; j++)
         {
-                for (i = 0; i < j; i++)
+                for (i = n; i > j; i--)
                 {
                         _putchar(' ');
                 }
-        _putchar('\\');
+		for( l = 0; l < j; l++)
+		{
+			_putchar('#');
+		}
         _putchar('\n');
-        j++;
         }
 }
 int main(void)
@@ -31,7 +33,7 @@ int main(void)
 	print_diagonal(0);
 	print_diagonal(2);
    	print_diagonal(10);
-    	print_diagonal(-4);
+    	print_diagonal(1);
 	return(0);
 }
 
