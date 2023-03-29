@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * swap_int : function that swaps the values of two integers.
+ * swap_int - function that swaps the values of two integers.
  * @a: address
  * @b: address
  * Return: void
@@ -16,7 +16,7 @@ void swap_int(int *a, int *b)
 
 	p1 = a;
 	p2 = b;
-	p = a;
+	*p = *a;
 	*p1 = *p2;
 	*p2 = *p;
 }
