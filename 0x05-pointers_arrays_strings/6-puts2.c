@@ -10,10 +10,10 @@
 
 void puts2(char *str)
 {
-	int len = strlen(str);
+/*	int len = strlen(str);*/
 	int i = 0;
 
-	while (i+=2)
+	while (i += 2)
 	{
 	_putchar(str[i]);
 	}
