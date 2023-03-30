@@ -10,7 +10,7 @@
 
 void puts2(char *str)
 {
-	int len = strlen(s);
+	int len = strlen(str);
 	int i = 0;
 
 	while (i+=2)
