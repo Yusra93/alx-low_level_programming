@@ -6,6 +6,7 @@
  * _strncpy - function that copies string.
  * @dest: char pointer
  * @src : char pointer
+ * @n : int
  * Return: address to char
  */
 
