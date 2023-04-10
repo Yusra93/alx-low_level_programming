@@ -17,12 +17,14 @@ int _strcmp(char *s1, char *s2)
 {
 	int i;
 	int len1 = strlen(s1);
-	int len2 = strlen(s2);
 
 	for (i = 0; i < len1; i++)
 	{
-		if (len1 != len2 || s1[i] != s2[i])
+		if (s1[i] == s2[i])
+			continue;
+		else
 			break;
+
 	}
 	return (s1[0] - s2[0]);
 }
