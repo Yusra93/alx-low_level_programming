@@ -6,7 +6,11 @@
  * _strcmp - function that compare string.
  * @s1: char pointer
  * @s2 : char pointer
- * Return: int
+ * Return: If str1 < str2, the negative difference of
+ * the first unmatched characters.
+ *         If s1 == s2, 0.
+ *         If s1 > s2, the positive difference of
+ *         the first unmatched characters.
  */
 
 int _strcmp(char *s1, char *s2)
