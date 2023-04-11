@@ -10,20 +10,16 @@
 
 char *leet(char *str)
 {
-	int i;
+	int i, j;
+	char leet[8] = {'O', 'L', '#', 'E', 'A', '#', '#', 'T'};
 
 	for (i = 0;  str[i] != '\0'; i++)
 	{
-		if (str[i] == 'A' || str[i] == 'a')
-			str[i] = '4';
-		else if (str[i] == 'O' || str[i] == 'o')
-			str[i] = '0';
-		else if (str[i] == 'E'  || str[i] == 'e')
-			str[i] = '3';
-		else if (str[i] == 'T'  || str[i] == 't')
-			str[i] = '7';
-		else if (str[i] == 'L'  || str[i] == 'l')
-			str[i] = '1';
+		for (j = 0; j < 8; j++)
+		{
+			if (str[i] == str[j] || str[i] - 32 == str[j])
+			str[i] = j + '0';
+		}
 	}
 	return (str);
 }
