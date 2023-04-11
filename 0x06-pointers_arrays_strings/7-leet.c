@@ -3,35 +3,27 @@
 #include <string.h>
 
 /**
- * cap_string - function that capitalizes all words of a string.
+ * leet - function that encodes a string into 1337.
  * @str: char pointer
  * Return: address to char
  */
 
-char *cap_string(char *str)
+char *leet(char *str)
 {
 	int i;
-/*	int len = strlen(str);*/
 
 	for (i = 0;  str[i] != '\0'; i++)
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			continue;
-		else if (str[i - 1] == '\t' ||
-			str[i - 1] == ' '  ||
-			str[i - 1] == '\n' ||
-			str[i - 1] == '.'  ||
-			str[i - 1] == ')'  ||
-			str[i - 1] == '('  ||
-			str[i - 1] == '{'  ||
-			str[i - 1] == '}'  ||
-			str[i - 1] == '!'  ||
-			str[i - 1] == '?'  ||
-			str[i - 1] == ','  ||
-			str[i - 1] == '"'  ||
-			str[i - 1] == ';'  ||
-			i == 0)
-			str[i] -= 32;
+		if (str[i] == 'A' || str[i] == 'a')
+			str[i] = '4';
+		else if (str[i] == 'O' || str[i] == 'o')
+			str[i] = '0';
+		else if (str[i] == 'E'  || str[i] == 'e')
+			str[i] = '3';
+		else if (str[i] == 'T'  || str[i] == 't')
+			str[i] = '7';
+		else if (str[i] == 'L'  || str[i] == 'l')
+			str[i] = '1';
 	}
 	return (str);
 }
