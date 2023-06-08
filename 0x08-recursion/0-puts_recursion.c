@@ -4,7 +4,7 @@
 /**
  * _puts_recursion - Write a function that prints a string,
  * followed by a new line.
- * s : pointer to a string
+ * @s : pointer to a string
  * Return: void
  */
 
