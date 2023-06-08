@@ -2,8 +2,9 @@
 #include "main.h"
 
 /**
- * _puts_recursion - Write a function that prints a string, followed by a new line.
- * char : pointer to a string
+ * _puts_recursion - Write a function that prints a string,
+ * followed by a new line.
+ * s : pointer to a string
  * Return: void
  */
 
