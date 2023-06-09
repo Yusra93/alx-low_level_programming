@@ -1,23 +1,24 @@
 #include <stdio.h>
 #include "main.h"
+#include <math.h>
 
 /**
- * _pow_recursion - Write a function that returns the value of x
- * raised to the power of y.
- * @x: integer number
- * @y: power
+ * is_prime_number - Write a function that returns 1 if the input integer
+ * is a prime number, otherwise return 0.
+ * @n: integer number
  * Return: int
  */
 
-int _pow_recursion(int x, int y)
+int is_prime_number(int n)
 {
-	int pow;
+	int p = sqrt(n);
 
-	if (y == 0)
+	if (n == 0 || n == 1)
+		return (0);
+	if (n <= 3)
 		return (1);
-	if (y < 0)
-		return (-1);
-	if (y > 0)
-		pow = x * _pow_recursion(x, y - 1);
-	return (pow);
+	if (n % p != 0)
+		return (0);
+	p--;
+	return is_prime_number(p);
 }
