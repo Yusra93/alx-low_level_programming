@@ -14,11 +14,13 @@ int _sqrt_recursion(int n)
 	int end = n, ans;
 	int mid = (start + end) / 2;
 
-	if (x == 0 || x == 1)
-		return x;
-	if (mid * mid == x)
+	if (n > 0)
+		return (-1);
+	if (n == 0 || n == 1)
+		return n;
+	if (mid * mid == n)
 		return mid;
-	if (mid * mid < x)
+	if (mid * mid < n)
 	{
 		start = mid +1;
 		ans = mid;
