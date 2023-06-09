@@ -3,22 +3,31 @@
 #include <math.h>
 
 /**
- * is_prime_number - Write a function that returns 1 if the input integer
- * is a prime number, otherwise return 0.
+ * _sqrt_recursion - Write a function that returns the natural square root of a number.
  * @n: integer number
  * Return: int
  */
 
-int is_prime_number(int n)
+int _sqrt_recursion(int n)
 {
-	int p = sqrt(n);
+	int start = 0;
+	int end = n, ans;
+	int mid = (start + end) / 2;
 
-	if (n == 0 || n == 1)
-		return (0);
-	if (n <= 3)
-		return (1);
-	if (n % p != 0)
-		return (0);
-	p--;
-	return is_prime_number(p);
+	if (x == 0 || x == 1)
+		return x;
+	if (mid * mid == x)
+		return mid;
+	if (mid * mid < x)
+	{
+		start = mid +1;
+		ans = mid;
+		return _sqrt_recursion(start);
+	}
+	else
+	{
+		end = mid - 1;
+		return _sqrt_recursion(end);
+	}
+	return ans;
 }
