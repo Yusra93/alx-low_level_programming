@@ -11,5 +11,6 @@
 
 int main(int argc, char *argv[])
 {
+	int l = argv[argc];
 	return (argc);
 }
