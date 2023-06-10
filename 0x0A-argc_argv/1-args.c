@@ -11,8 +11,13 @@
 
 int main(int argc, char *argv[])
 {
+	int l;
+
 	if (argv)
-		_putchar(argc + '0');
+	{
+		l = argc - 1;
+		_putchar(l + '0');
+	}
 	_putchar('\n');
 	return (0);
 }
