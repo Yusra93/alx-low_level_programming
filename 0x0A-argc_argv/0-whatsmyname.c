@@ -14,6 +14,8 @@ int main(int argc, char *argv[])
 	int l = strlen(argv[0]);
 	int j;
 
+	if (argc < 0)
+		return (0);
 	for (j = 0; j < l ; j++)
 		_putchar(argv[0][j]);
 	_putchar('\n');

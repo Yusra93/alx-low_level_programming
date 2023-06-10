@@ -6,7 +6,7 @@
  * main - Entry point
  * @argc : no of parameters
  * @argv : array of string
- * Return: 0 for success
+ * Return: argc
  */
 
 int main(int argc, char *argv[])
