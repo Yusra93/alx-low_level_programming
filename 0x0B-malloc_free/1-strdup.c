@@ -20,8 +20,8 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 	{
-		fprintf(stdrerr, "failed to allocatr memory");
-		return (NULL);
+		x = NULL;
+		return (x);
 	}
 	for (i = 0; i < l; i++)
 	{
