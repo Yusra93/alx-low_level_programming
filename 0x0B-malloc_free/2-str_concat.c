@@ -21,9 +21,13 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		s1 = (char *) malloc(sizeof(char));
+		s1[j] = "";
 	}
 	if (s2 == NULL)
+		{
 		s2 =  (char *) malloc(sizeof(char));
+		s2[j] = "";
+		}
 	for (i = 0; i < l; i++)
 	{
 		if (i >= l1)
