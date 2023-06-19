@@ -1,12 +1,12 @@
 #include<stdio.h>
-#include "/usr/local/include/myheader.h"
+
 /**
  * main - main entry
- * Return : 0 for success
-*/
+ * Return: int
+ */
 
 int main(void)
 {
-	printf("%s\n", __FILE_);
+	printf("%s\n", __FILE__);
 	return (0);
 }
