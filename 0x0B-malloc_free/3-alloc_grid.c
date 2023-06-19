@@ -12,20 +12,24 @@
 
 int **alloc_grid(int width, int height)
 {
-	int  i, j, l, k;
-	int *x[] = (int *)malloc(width * sizeof(int));
+	int  i, j, k;
+	int **x;
 
 	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
-	l = width * height;
-	for(k = 0; k < height; k++)
-		x[k] = (int *)malloc(width * sizeof(int));
-	for (i = 0; i < l; i++)
-	for (j = 0; j < l; j++)
+	x  = malloc(width * sizeof(int *));
+	if (x == NULL)
+		return (NULL);
+	for (k = 0; k < height; k++)
+		x[k] = malloc(height);
+	for (i = 0; i < width; i++)
 	{
-		x[i][j] = 0;
+		for (j = 0; j < height; j++)
+		{
+			x[i][j] = 0;
+		}
 	}
 	return (x);
 }
@@ -35,18 +39,18 @@ void print_grid(int **grid, int width, int height)
     int w;
     int h;
 
-    h = 0;
-    while (h < height)
+    w = 0;
+    while (w < width)
     {
-        w = 0;
-        while (w < width)
+       h = 0;
+        while (h < height)
         {
             printf("%d ", grid[h][w]);
-            w++;
+            h++;
         }
         printf("\n");
-        h++;
-    }   
+        w++;
+    }
 }
 int main(void)
 {
@@ -59,8 +63,10 @@ int main(void)
     }
     print_grid(grid, 6, 4);
     printf("\n");
+/*
     grid[0][3] = 98;
-    grid[3][4] = 402;
+grid[3][4] = 402;
+*/
     print_grid(grid, 6, 4);
     return (0);
 }
