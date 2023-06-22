@@ -1,3 +1,5 @@
+#ifndef dog
+#define dog
 /**
  * struct dog - Short description
  * @name: First member
@@ -6,8 +8,10 @@
  *
  * Description: Longer description
  */
-typedef struct dog{
-	char * name;
+typedef struct dog
+{
+	char *name;
 	float age;
-	char * owner;
+	char *owner;
 };
+#endif /* dog */
