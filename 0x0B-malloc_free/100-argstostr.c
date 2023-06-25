@@ -14,7 +14,10 @@ char *argstostr(int ac, char **av)
 {
 	int i, l;
 
-	l = sizeof(av)/sizeof(av[0]);
+	for (i = 1; i < ac; i++)
+	{
+		l += strlen(av[i]);
+	}
 
 	char *s = (char *)malloc(sizeof(char) * l);
 
