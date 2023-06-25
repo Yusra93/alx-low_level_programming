@@ -4,7 +4,8 @@
 #include <string.h>
 
 /**
- * argstostr - Write a function that concatenates all the arguments of your program.
+ * argstostr - Write a function that concatenates all
+ * the arguments of your program.
  * @ac : no of arguments
  * @av : array of arguments
  * Return: new string
@@ -13,22 +14,22 @@
 char *argstostr(int ac, char **av)
 {
 	int i, l;
+	char *s;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
 	for (i = 1; i < ac; i++)
 	{
 		l += strlen(av[i]);
 	}
-
-	char *s = (char *)malloc(sizeof(char) * l);
-
-	if (ac == 0 || av == NULL)
-		return (NULL);
+	s = (char *)malloc(sizeof(char) * l);
 	if (s == NULL)
 		return (NULL);
 	for (i = 1; i < ac; i++)
 	{
 		strcat(s, av[i]);
 		strcat(s, '\n');
-	} 
+	}
 	return (s);
 }
