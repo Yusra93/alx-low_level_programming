@@ -19,14 +19,14 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		l += strlen(av[i]);
 	}
 	s = (char *)malloc(sizeof(char) * l);
 	if (s == NULL)
 		return (NULL);
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		strcat(s, av[i]);
 		strcat(s, "\n");
