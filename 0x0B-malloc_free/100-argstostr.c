@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 	for (i = 1; i < ac; i++)
 	{
 		strcat(s, av[i]);
-		strcat(s, '\n');
+		strcat(s, "\n");
 	}
 	return (s);
 }
