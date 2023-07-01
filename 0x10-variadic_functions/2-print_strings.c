@@ -15,13 +15,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(ap, n);         /* Initialize the argument list. */
 
-	if (!separator)
-		separator = "";
 	for (i = 0; i < n; i++)
 	{
 		x = va_arg(ap, const char *);
 		printf("%s", x ? x : "(nil)");    /* Get the next argument value. */
-		if (i < n - 1)
+		if (separator && i < n - 1)
 			printf("%s ", separator);
 	}
 	printf("\n");
