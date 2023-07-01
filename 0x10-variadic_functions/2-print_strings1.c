@@ -8,18 +8,17 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list args;
-	unsigned int remaining = n;
-	const char *str = NULL;
+	va_list ap;
+	size_t i = n;
+	const char *x = NULL;
 
-	va_start(args, n);
-	if (!separator)
-		separator = "";
-	while (remaining--)
+	va_start(ap, n);         /* Initialize the argument list. */
+
+	while (i--)
 	{
-		str = va_arg(args, const char *);
-		printf("%s", str ? str : "(nil)");
-		if (remaining)
+		x = va_arg(ap, const char *);
+		printf("%s", x ? x : "(nil)");    /* Get the next argument value. */
+		if (separator && i)
 			printf("%s ", separator);
 	}
 	printf("\n");
