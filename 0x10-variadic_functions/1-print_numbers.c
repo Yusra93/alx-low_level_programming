@@ -17,7 +17,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		printf("%d", va_arg(ap, int));    /* Get the next argument value. */
-		if (separator)
+		if (separator && i < n)
 			printf("%s ", separator);
 	}
 	printf("\n");
