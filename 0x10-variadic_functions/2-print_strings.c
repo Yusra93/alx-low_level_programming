@@ -22,7 +22,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		x = va_arg(ap, const char *);
 		printf("%s", x ? x : "(nil)");    /* Get the next argument value. */
-		if (i)
+		if (separator && i)
 			printf("%s ", separator);
 	}
 	printf("\n");
