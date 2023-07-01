@@ -23,3 +23,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	printf("\n");
 	va_end(ap);                  /* Clean up. */
 }
+int main(void)
+{
+	print_numbers(", ", 4, 0, 98, -1024, 402);
+	print_numbers("; ", 1, 30);
+	print_numbers("", 4, 304, 76, 87236, 28376);
+	print_numbers(NULL, 4, 304, 76, 87236, 28376);
+	print_numbers("; ", 1, 0);
+	return (0);
+}
