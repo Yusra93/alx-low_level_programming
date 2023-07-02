@@ -9,5 +9,6 @@ void free_list(list_t *head)
 {
 	if (head == NULL)
 		exit(0);
+	free(head->str);
 	free(head);
 }
