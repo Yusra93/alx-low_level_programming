@@ -13,11 +13,12 @@ int main(void)
     list_t *head;
 
     head = NULL;
-    add_node(&head, "Alexandro");
-    add_node(&head, "Asaia");
-    add_node(&head, "Augustin");
-    add_node(&head, "Bennett");
-    add_node(&head, "Bilal");
+    add_node_end(&head, "Alexandro");
+    add_node_end(&head, "Asaia");
+    add_node_end(&head, "Augustin");
+    add_node_end(&head, "Bennett");
+/*   
+ add_node(&head, "Bilal");
     add_node(&head, "Chandler");
     add_node(&head, "Damian");
     add_node(&head, "Daniel");
@@ -41,6 +42,8 @@ int main(void)
     add_node(&head, "Tasneem");
     add_node(&head, "William");
     add_node(&head, "Zee");
-    print_list(head);
+  */
+  print_list(head);
     return (0);
 }
+
