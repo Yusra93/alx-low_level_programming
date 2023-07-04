@@ -12,8 +12,8 @@ void free_list(list_t *head)
 	if (head == NULL)
 	{
 		printf("freed!");
-	}
 		exit(0);
+	}
 	while (head)
 	{
 		node = head->next;
