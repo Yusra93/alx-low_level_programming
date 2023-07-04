@@ -11,13 +11,13 @@ void free_list(list_t *head)
 
 	if (head == NULL)
 	{
-		pritf("freed!");
+		printf("freed!");
 	}
 		exit(0);
-	while (*head)
+	while (head)
 	{
-		node = (*head)->next;
+		node = head->next;
 		free(head);
-		*head = node;
+		head = node;
 	}
 }
