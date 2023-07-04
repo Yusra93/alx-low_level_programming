@@ -10,10 +10,7 @@ void free_list(list_t *head)
 	list_t *node;
 
 	if (head == NULL)
-	{
-		printf("freed!");
 		exit(0);
-	}
 	while (head)
 	{
 		node = head->next;
