@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * free_listint -  function that frees a list_t list.
- * @head : list_t node to br free
+ * free_listint -  function that frees a listint_t list.
+ * @head : listint_t node to be free
  * Return: void
  */
 void free_listint(listint_t *head)
